@@ -6,7 +6,7 @@ const photoUrls = ['accommodation-apartment-bed-279805.jpg', 'activity-bicycle-b
 
 const mockPhotos = [];
 for (let i = 1; i <= 100; i++) {
-  randPhotoNums = [];
+  let randPhotoNums = [];
   while (randPhotoNums.length < 30) {
     let num = Math.floor(Math.random() * photoUrls.length);
     if (!randPhotoNums.includes(num)) {
@@ -18,7 +18,7 @@ for (let i = 1; i <= 100; i++) {
     obj.title = faker.lorem.words();
     obj.isVerified = faker.random.boolean();
     obj.listingId = i;
-    obj.photoUrl = `https://s3-us-west-1.amazonaws.com/wandcphotogallery/${photoUrls[randPhotoNums]}`;
+    obj.photoUrl = `https://s3-us-west-1.amazonaws.com/wandcphotogallery/${photoUrls[randPhotoNums[j]]}`;
     mockPhotos.push(obj);
   }
 }
