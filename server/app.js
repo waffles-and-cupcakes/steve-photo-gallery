@@ -1,9 +1,16 @@
 const express = require('express');
+const db = require('../database/Photo');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.sendStatus(200);
+app.use(express.static('public'));
+
+app.get('/rooms/:id/photos', (req, res) => {
+  console.log(req.params);
+
+  db.find({listingId: req.params.id}).exec(((err, photos) => {
+    res.send(photos);
+  }));
 });
 
 module.exports = app;
