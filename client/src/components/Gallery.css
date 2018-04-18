@@ -1,0 +1,7 @@
+.banner-img {
+  background: url("https://s3-us-west-1.amazonaws.com/wandcphotogallery/adorable-animal-canine-164446.jpg") no-repeat center top;
+  background-position: center center;
+  background-size: cover;
+  height: 75vh;
+  cursor: pointer;
+}
