@@ -6,8 +6,6 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/rooms/:id/photos', (req, res) => {
-  console.log(req.params);
-
   db.find({listingId: req.params.id}).exec(((err, photos) => {
     res.send(photos);
   }));
