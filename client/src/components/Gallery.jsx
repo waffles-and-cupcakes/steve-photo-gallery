@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Modal from './Modal';
 import './Gallery.css';
 
 class Gallery extends React.Component {
@@ -7,12 +9,15 @@ class Gallery extends React.Component {
     super(props);
 
     this.state = {
+      isOpen: false,
       photos: [
         {
           photoUrl: ''
         }
       ]
     };
+    this.toggleModal = this.toggleModal.bind(this);
+    this.toggleScrolling = this.toggleScrolling.bind(this);
   }
 
   componentDidMount() {
@@ -27,13 +32,28 @@ class Gallery extends React.Component {
       });
   }
 
+  toggleModal(e) {
+    this.setState({ isOpen: !this.state.isOpen }, this.toggleScrolling);
+  }
+
+  toggleScrolling() {
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.toggle('modal-open');
+  }
+
   render() {
-    console.log(this.state.photos);
     let style = {
-      'background-image': `url('${this.state.photos[0].photoUrl}')`
+      backgroundImage: `url('${this.state.photos[0].photoUrl}')`
     };
     return (
-      <div className="banner-img" style={style}>
+      <div>
+        <div onClick={this.toggleModal} className="banner-img" style={style}>
+          <button className="view-photos">View Photos</button>
+        </div>
+        <Modal
+          photos={this.state.photos}
+          open={this.state.isOpen}
+          toggleModal={this.toggleModal} />
       </div>
     );
   }
