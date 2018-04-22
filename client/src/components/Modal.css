@@ -1,0 +1,88 @@
+/* .modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 100;
+}
+
+.modal-content {
+  position: absolute;
+  left: 32%;
+  top: 10%;
+  transform: (-50%, -50%);
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+} */
+
+/* .modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+} */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1001;
+}
+
+.modal-content {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  right: 15%;
+  bottom: 20%;
+  text-align: center;
+  z-index: 1001;
+}
+
+.modal-photo {
+  height: 70vh;
+}
+
+.modal-close {
+  background: rgba(0, 0, 0, 0);
+  width: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  cursor: pointer;
+  padding: 16px 28px 8px;
+  border: none;
+  outline: none;
+}
+
+.close-x {
+  stroke: white;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 1;
+}
+
+svg {
+  display: block;
+}
