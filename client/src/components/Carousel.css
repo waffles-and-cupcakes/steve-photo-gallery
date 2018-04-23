@@ -1,0 +1,33 @@
+.slick-slide .image {
+  padding: 10px;
+}
+.slick-slide img {
+  display: block;
+  margin: auto;
+}
+.slick-slide img.slick-loading {
+  border: 0;
+}
+.slick-slider {
+  margin: 30px auto 50px;
+}
+.slick-arrow {
+  display: inline-block;
+  height: 100%;
+}
+
+.photo-description {
+  color: white;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  
+}
+
+.verified {
+  margin-top: 5px;
+  font-style: italic;
+  color: #888;
+}
