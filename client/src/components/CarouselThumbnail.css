@@ -1,4 +1,5 @@
 .thumbnail-image {
   height: 67px;
   width: 100px;
+  cursor: pointer;
 }

@@ -7,7 +7,7 @@ const CarouselImage = (props) => (
     accessability={true}
     swipe={false}
     fade={true}
-    arrows={true}
+    lazyLoad={'progressive'}
     asNavFor={props.thumbnail}
     afterChange={(current) => props.setCurrentImageIndex(current)}
     ref={props.setMain} >

@@ -21,7 +21,7 @@ class Gallery extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3002/rooms/1/photos')
+    axios.get('http://localhost:3002/rooms/7/photos')
       .then(res => {
         this.setState({
           photos: res.data
