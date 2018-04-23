@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Modal from './Modal';
-import './Gallery.css';
+import './App.css';
 
-class Gallery extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -59,4 +59,4 @@ class Gallery extends React.Component {
   }
 }
 
-export default Gallery;
+export default App;

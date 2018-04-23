@@ -35,7 +35,6 @@ class Carousel extends React.Component {
   }
 
   setCurrentImageIndex(index) {
-    console.log(index);
     this.setState({currentImageIndex: index});
   }
 
