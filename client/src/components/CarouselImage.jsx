@@ -9,6 +9,7 @@ const CarouselImage = (props) => (
     fade={true}
     arrows={true}
     asNavFor={props.thumbnail}
+    afterChange={(current) => props.setCurrentImageIndex(current)}
     ref={props.setMain} >
     {props.photos.map((photo, index) => {
       return (

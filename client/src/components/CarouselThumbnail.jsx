@@ -7,7 +7,6 @@ const CarouselThumbnail = (props) => (
     accessability={true}
     swipe={false}
     arrows={false}
-    className="center"
     focusOnSelect={true}
     centerMode={true}
     slidesToShow={9}
@@ -16,7 +15,7 @@ const CarouselThumbnail = (props) => (
     {props.photos.map((photo, index) => {
       return (
         <div>
-          <img className="thumbnail-image" src={`${photo.photoUrl}`} />
+          <img className="thumbnail-image" src={`${photo.thumbnail}`} />
         </div>
       );
     })}
