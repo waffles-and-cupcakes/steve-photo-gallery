@@ -19,6 +19,7 @@ for (let i = 1; i <= 100; i++) {
     obj.isVerified = faker.random.boolean();
     obj.listingId = i;
     obj.photoUrl = `https://s3-us-west-1.amazonaws.com/wandcphotogallery/${photoUrls[randPhotoNums[j]]}`;
+    obj.thumbnailUrl = `https://s3-us-west-1.amazonaws.com/wandcphotogalleryresized/resized-${photoUrls[randPhotoNums[j]]}`;
     mockPhotos.push(obj);
   }
 }
