@@ -3,7 +3,6 @@ import Carousel from './Carousel';
 import './Modal.css';
 
 const Modal = (props) => {
-  console.dir(props.photos);
   return props.open ? (
     <div>
       <div className="modal">
