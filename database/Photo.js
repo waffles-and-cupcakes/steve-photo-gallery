@@ -6,6 +6,7 @@ const photoSchema = new mongoose.Schema({
   title: String,
   isVerified: Boolean,
   photoUrl: String,
+  thumbnailUrl: String,
   listingId: Number,
 });
 
