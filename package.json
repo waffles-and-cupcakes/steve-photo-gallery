@@ -8,16 +8,19 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "test": "jest",
     "start": "webpack -p && node server/server.js",
     "dev:server": "nodemon server/server.js",
+    "test": "jest --coverage",
     "dev:react": "webpack -d --watch",
     "db:setup": "node database/seed.js"
   },
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/client/src/components/__mocks__/styleMock.js"
-    }
+    },
+    "setupFiles": [
+      "./client/src/setupTests.js"
+    ]
   },
   "dependencies": {
     "axios": "^0.18.0",
