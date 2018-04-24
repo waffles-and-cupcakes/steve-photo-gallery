@@ -54,7 +54,7 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className={style.container}>
         <CarouselImage
           setMain={this.setMain}
           sliderMain={this.sliderMain}
