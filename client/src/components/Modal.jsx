@@ -1,17 +1,17 @@
 import React from 'react';
 import Carousel from './Carousel';
-import './Modal.css';
+import style from './Modal.css';
 
 const Modal = (props) => {
   return props.open ? (
     <div>
-      <div className="modal">
-        <button className="modal-close" onClick={props.toggleModal}>
+      <div className={style.modal}>
+        <button className={style.modalClose} onClick={props.toggleModal}>
           <svg viewBox="0 0 40 40">
-            <path className="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+            <path className={style.closeX} d="M 10,10 L 30,30 M 30,10 L 10,30" />
           </svg>
         </button>
-        <div className="modal-content">
+        <div className={style.modalContent}>
           <Carousel photos={props.photos} />
         </div>
       </div>

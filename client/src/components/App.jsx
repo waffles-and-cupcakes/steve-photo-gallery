@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Modal from './Modal';
-import './App.css';
+import style from './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,17 +39,17 @@ class App extends React.Component {
 
   toggleScrolling() {
     const body = document.getElementsByTagName('body')[0];
-    body.classList.toggle('modal-open');
+    body.classList.toggle(style.modalOpen);
   }
 
   render() {
-    let style = {
+    let backgroundStyle = {
       backgroundImage: `url('${this.state.photos[0].photoUrl}')`
     };
     return (
       <div>
-        <div onClick={this.toggleModal} className="banner-img" style={style}>
-          <button className="view-photos">View Photos</button>
+        <div onClick={this.toggleModal} className={style.bannerImg} style={backgroundStyle}>
+          <button className={style.viewPhotos}>View Photos</button>
         </div>
         <Modal
           photos={this.state.photos}

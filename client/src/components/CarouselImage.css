@@ -1,4 +1,5 @@
-.main-image {
+.mainImage {
   height: 70vh;
   cursor: pointer;
+  margin: auto;
 }

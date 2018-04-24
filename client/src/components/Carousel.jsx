@@ -1,7 +1,7 @@
 import React from 'react';
 import CarouselImage from './CarouselImage';
 import CarouselThumbnail from './CarouselThumbnail';
-import './Carousel.css';
+import style from './Carousel.css';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -47,11 +47,11 @@ class Carousel extends React.Component {
           photos={this.props.photos}
           thumbnail={this.state.thumbnail}
           setCurrentImageIndex={this.setCurrentImageIndex} />
-        <ul className="photo-description">
-          <li className="photo-title">{`${this.state.currentImageIndex + 1}/${this.photosCount}: ${this.props.photos[this.state.currentImageIndex].title}`}</li>
-          {this.props.photos[this.state.currentImageIndex].isVerified ? <li className="verified">Verified Photo</li> : ''}
+        <ul className={style.photoDescription}>
+          <li>{`${this.state.currentImageIndex + 1}/${this.photosCount}: ${this.props.photos[this.state.currentImageIndex].title}`}</li>
+          {this.props.photos[this.state.currentImageIndex].isVerified ? <li className={style.verified}>Verified Photo</li> : ''}
         </ul>
-        <CarouselThumbnail className="thumbnail-carousel" setThumbnail={this.setThumbnail} sliderThumbnail={this.sliderThumbnail} photos={this.props.photos} main={this.state.main} />
+        <CarouselThumbnail setThumbnail={this.setThumbnail} sliderThumbnail={this.sliderThumbnail} photos={this.props.photos} main={this.state.main} />
       </div>
     );
   }
