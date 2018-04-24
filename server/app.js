@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.static('public'));
+app.use('/rooms/:id', express.static('public'));
 
 app.get('/rooms/:id/photos', (req, res) => {
   db.find({listingId: req.params.id}).exec(((err, photos) => {
