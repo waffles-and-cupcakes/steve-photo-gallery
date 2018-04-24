@@ -13,7 +13,7 @@ const CarouselImage = (props) => (
     ref={props.setMain} >
     {props.photos.map((photo, index) => {
       return (
-        <div>
+        <div key={photo.photoUrl + index}>
           <img className="main-image" onClick={() => props.sliderMain.slickNext()} src={`${photo.photoUrl}`} />
         </div>
       );
