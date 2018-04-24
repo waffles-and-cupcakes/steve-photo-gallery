@@ -1,5 +1,6 @@
 .slick-slide .image {
   padding: 10px;
+  text-align: center;
 }
 .slick-slide img {
   display: block;
@@ -16,7 +17,7 @@
   height: 100%;
 }
 
-.photo-description {
+.photoDescription {
   color: white;
   list-style: none;
   text-align: left;

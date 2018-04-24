@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import './CarouselImage.css';
+import style from './CarouselImage.css';
 
 const CarouselImage = (props) => (
   <Slider
@@ -14,7 +14,7 @@ const CarouselImage = (props) => (
     {props.photos.map((photo, index) => {
       return (
         <div key={photo.photoUrl + index}>
-          <img className="main-image" onClick={() => props.sliderMain.slickNext()} src={`${photo.photoUrl}`} />
+          <img className={style.mainImage} onClick={() => props.sliderMain.slickNext()} src={`${photo.photoUrl}`} />
         </div>
       );
     })}

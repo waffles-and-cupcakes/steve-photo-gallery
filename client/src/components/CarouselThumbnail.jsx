@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import './CarouselThumbnail.css';
+import style from './CarouselThumbnail.css';
 
 const CarouselThumbnail = (props) => (
   <Slider
@@ -15,7 +15,7 @@ const CarouselThumbnail = (props) => (
     {props.photos.map((photo, index) => {
       return (
         <div key={photo.thumbnailUrl + index}>
-          <img className="thumbnail-image" src={`${photo.thumbnailUrl}`} />
+          <img className={style.thumbnailImage} src={`${photo.thumbnailUrl}`} />
         </div>
       );
     })}

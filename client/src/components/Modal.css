@@ -8,7 +8,7 @@
   z-index: 1001;
 }
 
-.modal-content {
+.modalContent {
   position: absolute;
   top: 5%;
   left: 15%;
@@ -18,11 +18,11 @@
   z-index: 1001;
 }
 
-.modal-photo {
+.modalPhoto {
   height: 70vh;
 }
 
-.modal-close {
+.modalClose {
   background: rgba(0, 0, 0, 0);
   width: 100px;
   position: fixed;
@@ -35,7 +35,7 @@
   outline: none;
 }
 
-.close-x {
+.closeX {
   stroke: white;
   fill: transparent;
   stroke-linecap: round;
