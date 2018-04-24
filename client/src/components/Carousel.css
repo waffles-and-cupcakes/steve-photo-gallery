@@ -27,6 +27,10 @@
   
 }
 
+.container {
+  width: 100%;
+}
+
 .verified {
   margin-top: 5px;
   font-style: italic;
