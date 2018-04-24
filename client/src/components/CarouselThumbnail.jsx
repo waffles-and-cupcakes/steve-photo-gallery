@@ -33,8 +33,10 @@ const CarouselThumbnail = (props) => {
       ref={props.setThumbnail} >
       {props.photos.map((photo, index) => {
         return (
-          <div key={photo.thumbnailUrl + index}>
-            <img className={style.thumbnailImage} src={`${photo.thumbnailUrl}`} />
+          <div key={photo.thumbnailUrl + index} >
+            <div className={style.thumbContainer} >
+              <img className={style.thumbnailImage} src={`${photo.thumbnailUrl}`} />
+            </div>
           </div>
         );
       })}
