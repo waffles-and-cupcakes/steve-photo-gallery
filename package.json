@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "nodemon server/server.js",
+    "start": "webpack -p && node server/server.js",
+    "dev:server": "nodemon server/server.js",
     "dev:react": "webpack -d --watch",
     "db:setup": "node database/seed.js"
   },
