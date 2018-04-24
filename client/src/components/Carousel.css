@@ -16,6 +16,9 @@
   display: inline-block;
   height: 100%;
 }
+:global .slick-center img {
+  opacity: 1;
+}
 
 .photoDescription {
   color: white;
