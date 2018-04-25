@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount, render, configure } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
-import Modal from './Modal.jsx';
+import Modal from '../client/src/components/Modal.jsx';
 
 configure({adapter: new Adapter() });
 
