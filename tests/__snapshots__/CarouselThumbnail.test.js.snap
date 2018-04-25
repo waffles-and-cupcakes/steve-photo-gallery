@@ -6,6 +6,40 @@ exports[`CarouselThumbnail should render correctly 1`] = `
   arrows={false}
   centerMode={true}
   focusOnSelect={true}
+  responsive={
+    Array [
+      Object {
+        "breakpoint": 1500,
+        "settings": Object {
+          "slidesToShow": 7,
+        },
+      },
+      Object {
+        "breakpoint": 1200,
+        "settings": Object {
+          "slidesToShow": 6,
+        },
+      },
+      Object {
+        "breakpoint": 1050,
+        "settings": Object {
+          "slidesToShow": 5,
+        },
+      },
+      Object {
+        "breakpoint": 850,
+        "settings": Object {
+          "slidesToShow": 3,
+        },
+      },
+      Object {
+        "breakpoint": 600,
+        "settings": Object {
+          "slidesToShow": 2,
+        },
+      },
+    ]
+  }
   slidesToShow={9}
   swipe={false}
 >
