@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount, render, configure } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
-import CarouselImage from './CarouselImage.jsx';
+import CarouselImage from '../client/src/components/CarouselImage.jsx';
 
 configure({adapter: new Adapter() });
 
