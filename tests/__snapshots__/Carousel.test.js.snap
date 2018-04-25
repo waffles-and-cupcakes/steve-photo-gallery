@@ -49,7 +49,6 @@ exports[`Carousel should render correctly 1`] = `
       ]
     }
     setThumbnail={[Function]}
-    windowWidth={1024}
   />
 </div>
 `;

@@ -27,23 +27,3 @@ test('CarouselThumbnail should render correctly', () => {
   const output = shallow(<CarouselThumbnail photos={photos} />);
   expect(shallowToJson(output)).toMatchSnapshot();
 });
-
-test('CarouselThumbnail should render the number of slides based on windowWidth', () => {
-  let output = shallow(<CarouselThumbnail photos={photos} windowWidth={300} />);
-  expect(output.get(0).props.slidesToShow).toBe(1);
-
-  output = shallow(<CarouselThumbnail photos={photos} windowWidth={700} />);
-  expect(output.get(0).props.slidesToShow).toBe(3);
-
-  output = shallow(<CarouselThumbnail photos={photos} windowWidth={900} />);
-  expect(output.get(0).props.slidesToShow).toBe(5);
-
-  output = shallow(<CarouselThumbnail photos={photos} windowWidth={1100} />);
-  expect(output.get(0).props.slidesToShow).toBe(6);
-
-  output = shallow(<CarouselThumbnail photos={photos} windowWidth={1400} />);
-  expect(output.get(0).props.slidesToShow).toBe(7);
-
-  output = shallow(<CarouselThumbnail photos={photos} windowWidth={1600} />);
-  expect(output.get(0).props.slidesToShow).toBe(9);
-});

@@ -2,46 +2,59 @@ import React from 'react';
 import Slider from 'react-slick';
 import style from './CarouselThumbnail.css';
 
-const getNumSlides = (windowWidth) => {
-  let numSlides = 9;
-  if (windowWidth < 600) {
-    numSlides = 1;
-  } else if (windowWidth < 850) {
-    numSlides = 3;
-  } else if (windowWidth < 1050) {
-    numSlides = 5;
-  } else if (windowWidth < 1200) {
-    numSlides = 6;
-  } else if (windowWidth < 1500) {
-    numSlides = 7;
-  }
-  return numSlides;
-};
-
-const CarouselThumbnail = (props) => {
-  const numSlides = getNumSlides(props.windowWidth);
-
-  return (
-    <Slider
-      accessability={true}
-      swipe={false}
-      arrows={false}
-      focusOnSelect={true}
-      centerMode={true}
-      slidesToShow={numSlides}
-      asNavFor={props.main}
-      ref={props.setThumbnail} >
-      {props.photos.map((photo, index) => {
-        return (
-          <div key={photo.thumbnailUrl + index} >
-            <div className={style.thumbContainer} >
-              <img className={style.thumbnailImage} src={`${photo.thumbnailUrl}`} />
-            </div>
+const CarouselThumbnail = (props) => (
+  <Slider
+    accessability={true}
+    swipe={false}
+    arrows={false}
+    focusOnSelect={true}
+    centerMode={true}
+    slidesToShow={9}
+    asNavFor={props.main}
+    ref={props.setThumbnail}
+    responsive={[
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 7
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 6
+        }
+      },
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]} >
+    {props.photos.map((photo, index) => {
+      return (
+        <div key={photo.thumbnailUrl + index} >
+          <div className={style.thumbContainer} >
+            <img className={style.thumbnailImage} src={`${photo.thumbnailUrl}`} />
           </div>
-        );
-      })}
-    </Slider>
-  );
-};
+        </div>
+      );
+    })}
+  </Slider>
+);
+
 
 export default CarouselThumbnail;
