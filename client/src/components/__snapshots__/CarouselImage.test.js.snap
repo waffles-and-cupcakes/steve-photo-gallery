@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarouselImage should render correctly 1`] = `
+<Slider
+  accessability={true}
+  afterChange={[Function]}
+  fade={true}
+  lazyLoad="progressive"
+  swipe={false}
+>
+  <div
+    key="www.example.com/photo0"
+  >
+    <img
+      onClick={[Function]}
+      src="www.example.com/photo"
+    />
+  </div>
+  <div
+    key="www.example.com/photo1"
+  >
+    <img
+      onClick={[Function]}
+      src="www.example.com/photo"
+    />
+  </div>
+</Slider>
+`;

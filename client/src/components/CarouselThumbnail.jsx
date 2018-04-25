@@ -4,15 +4,15 @@ import style from './CarouselThumbnail.css';
 
 const getNumSlides = (windowWidth) => {
   let numSlides = 9;
-  if (window.innerWidth < 600) {
+  if (windowWidth < 600) {
     numSlides = 1;
-  } else if (window.innerWidth < 850) {
+  } else if (windowWidth < 850) {
     numSlides = 3;
-  } else if (window.innerWidth < 1050) {
+  } else if (windowWidth < 1050) {
     numSlides = 5;
-  } else if (window.innerWidth < 1200) {
+  } else if (windowWidth < 1200) {
     numSlides = 6;
-  } else if (window.innerWidth < 1500) {
+  } else if (windowWidth < 1500) {
     numSlides = 7;
   }
   return numSlides;

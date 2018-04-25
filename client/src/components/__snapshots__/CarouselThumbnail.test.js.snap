@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarouselThumbnail should render correctly 1`] = `
+<Slider
+  accessability={true}
+  arrows={false}
+  centerMode={true}
+  focusOnSelect={true}
+  slidesToShow={9}
+  swipe={false}
+>
+  <div
+    key="www.example.com/thumbnail0"
+  >
+    <div>
+      <img
+        src="www.example.com/thumbnail"
+      />
+    </div>
+  </div>
+  <div
+    key="www.example.com/thumbnail1"
+  >
+    <div>
+      <img
+        src="www.example.com/thumbnail"
+      />
+    </div>
+  </div>
+</Slider>
+`;
