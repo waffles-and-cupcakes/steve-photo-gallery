@@ -20,6 +20,14 @@
     },
     "setupFiles": [
       "./client/src/setupTests.js"
+    ],
+    "collectCoverageFrom": [
+      "client/src/**/*.{js,jsx}",
+      "server/**/*.js",
+      "database/**/*.js",
+      "!database/seed.js",      
+      "!<rootDir>/client/src/setupTests.js",
+      "!<rootDir>/node_modules/"
     ]
   },
   "dependencies": {
