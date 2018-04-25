@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gallery should render correctly 1`] = `
+exports[`App should render correctly 1`] = `
 <div>
   <div
-    className="banner-img"
     onClick={[Function]}
     style={
       Object {
@@ -11,9 +10,7 @@ exports[`Gallery should render correctly 1`] = `
       }
     }
   >
-    <button
-      className="view-photos"
-    >
+    <button>
       View Photos
     </button>
   </div>
