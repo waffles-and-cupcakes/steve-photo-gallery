@@ -8,7 +8,9 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "webpack -p && node server/server.js",
+    "start": "npm run db:setup && npm run prod:server",
+    "build": "webpack -p",
+    "prod:server": "node server/server.js",
     "dev:server": "nodemon server/server.js",
     "test": "jest --coverage",
     "dev:react": "webpack -d --watch",
