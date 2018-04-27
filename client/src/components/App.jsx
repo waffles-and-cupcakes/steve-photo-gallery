@@ -22,7 +22,6 @@ class App extends React.Component {
 
   componentDidMount() {
     const id = window.location.pathname.split('/')[2];
-    console.log(id);
     axios.get(`http://13.57.25.109/rooms/${id}/photos`)
       .then(res => {
         this.setState({
