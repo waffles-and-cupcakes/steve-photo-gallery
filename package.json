@@ -8,7 +8,9 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "webpack -p && node server/server.js",
+    "start": "npm run db:setup && npm run prod:server",
+    "build": "webpack -p",
+    "prod:server": "node server/server.js",
     "dev:server": "nodemon server/server.js",
     "test": "jest --coverage",
     "dev:react": "webpack -d --watch",
@@ -25,13 +27,14 @@
       "client/src/**/*.{js,jsx}",
       "server/**/*.js",
       "database/**/*.js",
-      "!database/seed.js",      
+      "!database/seed.js",
       "!<rootDir>/client/src/setupTests.js",
       "!<rootDir>/node_modules/"
     ]
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "mongoose": "^4.11.6",
     "react": "^16.3.1",

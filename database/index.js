@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db = mongoose.connect('mongodb://localhost/photoGallery');
+const db = mongoose.connect('mongodb://mongo/photoGallery');
 
 
 module.exports = db;
