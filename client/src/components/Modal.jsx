@@ -21,9 +21,9 @@ const Modal = (props) => (
 );
 
 Modal.propTypes = {
-  open: PropTypes.boolean,
+  open: PropTypes.bool,
   photos: PropTypes.array,
-  toggleModal: PropTypes.function,
+  toggleModal: PropTypes.func,
 };
 
 export default Modal;

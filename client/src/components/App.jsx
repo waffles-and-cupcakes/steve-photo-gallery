@@ -21,7 +21,6 @@ class App extends React.Component {
       ],
     };
     this.toggleModal = this.toggleModal.bind(this);
-    this.toggleScrolling = this.toggleScrolling.bind(this);
   }
 
   componentDidMount() {

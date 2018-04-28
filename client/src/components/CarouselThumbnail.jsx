@@ -57,8 +57,8 @@ const CarouselThumbnail = (props) => (
 
 CarouselThumbnail.propTypes = {
   photos: PropTypes.array,
-  setThumbnail: PropTypes.function,
-  main: PropTypes.string,
+  setThumbnail: PropTypes.func,
+  main: PropTypes.object,
 };
 
 export default CarouselThumbnail;

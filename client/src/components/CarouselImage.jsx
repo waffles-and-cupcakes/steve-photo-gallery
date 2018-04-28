@@ -22,9 +22,9 @@ const CarouselImage = (props) => (
 
 CarouselImage.propTypes = {
   photos: PropTypes.array,
-  setMain: PropTypes.function,
-  setCurrentImageIndex: PropTypes.function,
-  thumbnail: PropTypes.string,
+  setMain: PropTypes.func,
+  setCurrentImageIndex: PropTypes.func,
+  thumbnail: PropTypes.object,
 };
 
 export default CarouselImage;
