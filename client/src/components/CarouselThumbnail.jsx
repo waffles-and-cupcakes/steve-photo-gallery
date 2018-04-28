@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import style from './CarouselThumbnail.css';
 
@@ -16,45 +17,48 @@ const CarouselThumbnail = (props) => (
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 7
-        }
+          slidesToShow: 7,
+        },
       },
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 6
-        }
+          slidesToShow: 6,
+        },
       },
       {
         breakpoint: 1050,
         settings: {
-          slidesToShow: 5
-        }
+          slidesToShow: 5,
+        },
       },
       {
         breakpoint: 850,
         settings: {
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2
-        }
-      }
+          slidesToShow: 2,
+        },
+      },
     ]} >
-    {props.photos.map((photo, index) => {
-      return (
-        <div key={photo.thumbnailUrl + index} >
-          <div className={style.thumbContainer} >
-            <img className={style.thumbnailImage} src={`${photo.thumbnailUrl}`} />
-          </div>
+    {props.photos.map((photo, index) => (
+      <div key={photo.thumbnailUrl + index} >
+        <div className={style.thumbContainer} >
+          <img className={style.thumbnailImage} src={`${photo.thumbnailUrl}`} />
         </div>
-      );
-    })}
+      </div>
+    ))}
   </Slider>
 );
 
+CarouselThumbnail.propTypes = {
+  photos: PropTypes.array,
+  setThumbnail: PropTypes.function,
+  main: PropTypes.string,
+};
 
 export default CarouselThumbnail;
