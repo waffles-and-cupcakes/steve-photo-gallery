@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow, mount, render, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 import CarouselThumbnail from '../client/src/components/CarouselThumbnail.jsx';
 
-configure({adapter: new Adapter() });
+configure({ dapter: new Adapter() });
 
 const photos = [
   {
@@ -20,7 +20,7 @@ const photos = [
     photoUrl: 'www.example.com/photo',
     thumbnailUrl: 'www.example.com/thumbnail',
     listingId: 1,
-  }
+  },
 ];
 
 test('CarouselThumbnail should render correctly', () => {
