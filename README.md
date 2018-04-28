@@ -1,13 +1,12 @@
-# Project Name
+# AirBnC Room Listing Reviews
 
-> Project description
+> A room listing app for travellers to find places to stay
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - AirBnC Full App: https://github.com/waffles-and-cupcakes/steve-proxy
+  - AirBnC Listing Description: https://github.com/waffles-and-cupcakes/shiyao-listingDescription
+  - AirBnC Reviews: https://github.com/waffles-and-cupcakes/belinda-reviews
 
 ## Table of Contents
 
@@ -17,13 +16,18 @@
 
 ## Usage
 
-> Some usage instructions
+> To build the application 
+```sh
+npm run build
+npm run db:setup
+npm run prod:server
+```
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
+- Node 6.13.0 and up
 - etc
 
 ## Development
@@ -37,3 +41,10 @@ npm install -g webpack
 npm install
 ```
 
+To start dev environment
+
+```sh
+npm db:setup
+npm run dev:react
+npm run dev:server
+```
