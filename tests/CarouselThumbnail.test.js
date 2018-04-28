@@ -4,7 +4,7 @@ import { shallowToJson } from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 import CarouselThumbnail from '../client/src/components/CarouselThumbnail.jsx';
 
-configure({ dapter: new Adapter() });
+configure({ adapter: new Adapter() });
 
 const photos = [
   {
