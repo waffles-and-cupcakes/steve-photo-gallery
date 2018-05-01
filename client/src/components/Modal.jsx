@@ -1,9 +1,10 @@
 import React from 'react';
-import Carousel from './Carousel';
+import PropTypes from 'prop-types';
+import Carousel from './Carousel.jsx';
 import style from './Modal.css';
 
-const Modal = (props) => {
-  return props.open ? (
+const Modal = (props) => (
+  props.open ? (
     <div>
       <div className={style.modal}>
         <button className={style.modalClose} onClick={props.toggleModal}>
@@ -16,7 +17,13 @@ const Modal = (props) => {
         </div>
       </div>
     </div>
-  ) : null;
+  ) : null
+);
+
+Modal.propTypes = {
+  open: PropTypes.bool,
+  photos: PropTypes.array,
+  toggleModal: PropTypes.func,
 };
 
 export default Modal;

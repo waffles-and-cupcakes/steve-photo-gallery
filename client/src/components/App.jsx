@@ -1,8 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Modal from './Modal';
+import Modal from './Modal.jsx';
 import style from './App.css';
+
+const toggleScrolling = () => {
+  const body = document.getElementsByTagName('body')[0];
+  body.classList.toggle(style.modalOpen);
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -12,12 +16,11 @@ class App extends React.Component {
       isOpen: false,
       photos: [
         {
-          photoUrl: ''
-        }
-      ]
+          photoUrl: '',
+        },
+      ],
     };
     this.toggleModal = this.toggleModal.bind(this);
-    this.toggleScrolling = this.toggleScrolling.bind(this);
   }
 
   componentDidMount() {
@@ -25,26 +28,18 @@ class App extends React.Component {
     axios.get(`/rooms/${id}/photos`)
       .then(res => {
         this.setState({
-          photos: res.data
+          photos: res.data,
         });
-      })
-      .catch(err => {
-        console.error(err);
       });
   }
 
-  toggleModal(e) {
-    this.setState({ isOpen: !this.state.isOpen }, this.toggleScrolling);
-  }
-
-  toggleScrolling() {
-    const body = document.getElementsByTagName('body')[0];
-    body.classList.toggle(style.modalOpen);
+  toggleModal() {
+    this.setState({ isOpen: !this.state.isOpen }, toggleScrolling);
   }
 
   render() {
-    let backgroundStyle = {
-      backgroundImage: `url('${this.state.photos[0].photoUrl}')`
+    const backgroundStyle = {
+      backgroundImage: `url('${this.state.photos[0].photoUrl}')`,
     };
     return (
       <div>

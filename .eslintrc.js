@@ -15,33 +15,12 @@ module.exports = {
       'jsx': true
     }
   },
+  extends: ['airbnb-base', 'plugin:react/recommended'],
+  parser: 'babel-eslint',
   rules: {
-    /* Indentation */
-    'no-mixed-spaces-and-tabs': ERROR,
-    'indent': [ERROR, ERROR],
-    /* Variable names */
-    'camelcase': ERROR,
-    /* Language constructs */
-    'curly': ERROR,
-    'eqeqeq': [ERROR, 'smart'],
-    'func-style': [ERROR, 'expression'],
-    /* Semicolons */
-    'semi': ERROR,
-    'no-extra-semi': ERROR,
-    /* Padding & additional whitespace (perferred but optional) */
-    'brace-style': [ERROR, '1tbs', { 'allowSingleLine': true }],
-    'semi-spacing': WARN,
-    'key-spacing': WARN,
-    'block-spacing': WARN,
-    'comma-spacing': WARN,
-    'no-multi-spaces': WARN,
-    'space-before-blocks': WARN,
-    'keyword-spacing': [WARN, { 'before': true, 'after': true }],
-    'space-infix-ops': WARN,
-    /* Variable declaration */
-    'one-var': [WARN, { 'uninitialized': 'always', 'initialized': 'never' }],
-    /* Minuta */
-    'comma-style': [ERROR, 'last'],
-    'quotes': [WARN, 'single']
+    'react/jsx-uses-vars': ERROR,
+    'react/jsx-uses-react': ERROR,
+    'arrow-parens': OFF,
+    'no-plusplus': OFF
   }
 };

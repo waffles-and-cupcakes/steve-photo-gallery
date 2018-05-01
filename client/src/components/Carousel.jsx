@@ -1,6 +1,7 @@
 import React from 'react';
-import CarouselImage from './CarouselImage';
-import CarouselThumbnail from './CarouselThumbnail';
+import PropTypes from 'prop-types';
+import CarouselImage from './CarouselImage.jsx';
+import CarouselThumbnail from './CarouselThumbnail.jsx';
 import style from './Carousel.css';
 
 class Carousel extends React.Component {
@@ -35,7 +36,7 @@ class Carousel extends React.Component {
   }
 
   setCurrentImageIndex(index) {
-    this.setState({currentImageIndex: index});
+    this.setState({ currentImageIndex: index });
   }
 
   render() {
@@ -51,10 +52,18 @@ class Carousel extends React.Component {
           <li>{`${this.state.currentImageIndex + 1}/${this.photosCount}: ${this.props.photos[this.state.currentImageIndex].title}`}</li>
           {this.props.photos[this.state.currentImageIndex].isVerified ? <li className={style.verified}>Verified Photo</li> : ''}
         </ul>
-        <CarouselThumbnail setThumbnail={this.setThumbnail} sliderThumbnail={this.sliderThumbnail} photos={this.props.photos} main={this.state.main} />
+        <CarouselThumbnail
+          setThumbnail={this.setThumbnail}
+          sliderThumbnail={this.sliderThumbnail}
+          photos={this.props.photos}
+          main={this.state.main} />
       </div>
     );
   }
 }
+
+Carousel.propTypes = {
+  photos: PropTypes.array,
+};
 
 export default Carousel;

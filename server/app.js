@@ -9,7 +9,7 @@ app.use(cors());
 app.use('/rooms/:id', express.static('public'));
 
 app.get('/rooms/:id/photos', (req, res) => {
-  db.find({listingId: req.params.id}).exec(((err, photos) => {
+  db.find({ listingId: req.params.id }).exec(((err, photos) => {
     res.send(photos);
   }));
 });
